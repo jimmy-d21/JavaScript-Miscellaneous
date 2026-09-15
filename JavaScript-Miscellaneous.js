@@ -40,3 +40,6 @@ console.log(parseInt("42", 10)); // Output: 42
 
 // Example 2: Parsing CSS measurement strings
 console.log(parseInt("16px", 10)); // Output: 16
+
+// Example 3: Parsing binary strings using radix
+console.log(parseInt("1010", 2)); // Output: 10
