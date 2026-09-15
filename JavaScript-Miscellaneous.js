@@ -33,6 +33,7 @@ console.log("hello" instanceof String); // Output: false
 console.log(new String("hello") instanceof String); // Output: true
 
 // 2. Number Parsing
+// Topic 2.1: parseInt()
 // parseInt(str, radix): Parses string from left to right and returns integer; always pass radix (usually 10)
 
 // Example 1: Basic integer parsing with radix
@@ -57,6 +58,7 @@ console.log(parseFloat("12.5em")); // Output: 12.5
 console.log(parseFloat("314e-2")); // Output: 3.14
 
 // 3. JSON Manipulation
+// Topic 3.1: JSON.stringify()
 // JSON.stringify(obj, replacer, space): Converts JS object/value into JSON string
 
 // Example 1: Serializing an object
@@ -93,3 +95,12 @@ const parsed = JSON.parse(data, (key, val) =>
   key === "date" ? new Date(val) : val,
 );
 console.log(parsed.date instanceof Date); // Output: true
+
+// 4. Asynchronous Timers
+// Topic 4.1: setTimeout()
+// setTimeout(fn, delay, ...args): Executes callback function ONCE after delay (in ms); returns timer ID
+
+// Example 1: Basic execution delay
+setTimeout(() => {
+  console.log("Executed after 100ms");
+}, 100);
