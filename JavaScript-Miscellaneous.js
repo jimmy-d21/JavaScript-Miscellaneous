@@ -82,3 +82,7 @@ console.log(JSON.stringify(user, ["name"])); // Output: '{"name":"Alice"}'
 const jsonStr = '{"name":"Bob","age":30}';
 const user3 = JSON.parse(jsonStr);
 console.log(user3.name); // Output: "Bob"
+
+// Example 2: Parsing JSON array
+const numbers = JSON.parse("[1, 2, 3]");
+console.log(numbers[0]); // Output: 1
