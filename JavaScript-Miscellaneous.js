@@ -62,3 +62,12 @@ console.log(parseFloat("314e-2")); // Output: 3.14
 // Example 1: Serializing an object
 const user2 = { name: "Alice", age: 25 };
 console.log(JSON.stringify(user2)); // Output: '{"name":"Alice","age":25}'
+
+// Example 2: Pretty printing with indentation
+console.log(JSON.stringify(user, null, 2));
+/* Output:
+{
+  "name": "Alice",
+  "age": 25
+}
+*/
