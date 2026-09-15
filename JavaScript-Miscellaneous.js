@@ -52,3 +52,6 @@ console.log(parseFloat("3.14")); // Output: 3.14
 
 // Example 2: Stripping trailing non-numeric characters
 console.log(parseFloat("12.5em")); // Output: 12.5
+
+// Example 3: Strings with scientific notation
+console.log(parseFloat("314e-2")); // Output: 3.14
