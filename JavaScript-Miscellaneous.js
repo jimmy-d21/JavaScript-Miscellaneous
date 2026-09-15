@@ -27,3 +27,7 @@ console.log(user instanceof User); // Output: true
 const arr = [1, 2, 3];
 console.log(arr instanceof Array); // Output: true
 console.log(arr instanceof Object); // Output: true
+
+// Example 3: Primitive values vs Object wrappers
+console.log("hello" instanceof String); // Output: false
+console.log(new String("hello") instanceof String); // Output: true
