@@ -188,3 +188,23 @@ const tickId = setInterval(() => {
 // Output after ~200ms:
 // "Progress: 10%"
 // (Interval stops running)
+
+// Topic 4.4: clearInterval()
+// clearInterval(intervalId): Stops recurring execution initialized by setInterval()
+
+// Example 1: Stopping a countdown
+let counter = 3;
+const timer2 = setInterval(() => {
+  console.log(counter);
+  counter--;
+  if (counter === 0) {
+    clearInterval(timer2);
+    console.log("Liftoff!");
+  }
+}, 50);
+// Output sequence:
+// (~50ms)  "3"
+// (~100ms) "2"
+// (~150ms) "1"
+// (~150ms) "Liftoff!"
+// (Interval stops running)
