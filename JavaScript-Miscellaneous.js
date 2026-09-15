@@ -104,9 +104,20 @@ console.log(parsed.date instanceof Date); // Output: true
 setTimeout(() => {
   console.log("Executed after 100ms");
 }, 100);
+// Output after ~100ms:
+// "Executed after 100ms"
 
 // Example 2: Passing arguments to callback
 function greet(name) {
   console.log(`Hello, ${name}`);
 }
 setTimeout(greet, 150, "Alice");
+// Output after ~150ms:
+// "Hello, Alice"
+
+// Example 3: Non-blocking zero delay
+setTimeout(() => console.log("Second"), 0);
+console.log("First");
+// Output (synchronous code runs before asynchronous callbacks):
+// "First"
+// "Second"
