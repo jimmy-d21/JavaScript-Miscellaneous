@@ -86,3 +86,10 @@ console.log(user3.name); // Output: "Bob"
 // Example 2: Parsing JSON array
 const numbers = JSON.parse("[1, 2, 3]");
 console.log(numbers[0]); // Output: 1
+
+// Example 3: Transforming values using reviver function
+const data = '{"date":"2026-09-14"}';
+const parsed = JSON.parse(data, (key, val) =>
+  key === "date" ? new Date(val) : val,
+);
+console.log(parsed.date instanceof Date); // Output: true
