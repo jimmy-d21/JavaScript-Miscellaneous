@@ -104,3 +104,9 @@ console.log(parsed.date instanceof Date); // Output: true
 setTimeout(() => {
   console.log("Executed after 100ms");
 }, 100);
+
+// Example 2: Passing arguments to callback
+function greet(name) {
+  console.log(`Hello, ${name}`);
+}
+setTimeout(greet, 150, "Alice");
