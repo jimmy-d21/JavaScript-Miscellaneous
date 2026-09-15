@@ -132,3 +132,16 @@ const timerId = setTimeout(() => {
 clearTimeout(timerId);
 // Output:
 // (Nothing logged - the timer was canceled before execution)
+
+// Example 2: Simple debounce mechanism
+let searchTimer;
+function handleInput(text) {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    console.log(`Searching: ${text}`);
+  }, 300);
+}
+handleInput("A");
+handleInput("Alice"); // Cancels previous "A" timer
+// Output after 300ms:
+// "Searching: Alice"
