@@ -166,3 +166,12 @@ const intervalId = setInterval(() => {
 // Output after ~200ms:
 // "Interval count: 2"
 // (Interval stops running)
+
+// Example 2: Passing parameters to interval
+function logTime(label) {
+  console.log(`${label}: ${Date.now()}`);
+}
+const timer = setInterval(logTime, 500, "Tick");
+clearInterval(timer); // Immediately cleaned up for safe execution demo
+// Output:
+// (Nothing logged - cleared synchronously before the first 500ms delay)
