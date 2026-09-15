@@ -217,3 +217,9 @@ const autoSave = setInterval(() => {
 clearInterval(autoSave);
 // Output:
 // (Nothing logged - cleared synchronously before the 5000ms delay elapses)
+
+// Example 3: Safe cleanup
+let id = null;
+clearInterval(id); // Fails silently
+// Output:
+// (No output, code continues running without errors)
