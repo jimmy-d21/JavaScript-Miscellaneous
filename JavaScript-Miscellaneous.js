@@ -74,3 +74,11 @@ console.log(JSON.stringify(user, null, 2));
 
 // Example 3: Filtering properties with replacer array
 console.log(JSON.stringify(user, ["name"])); // Output: '{"name":"Alice"}'
+
+// Topic 3.2: JSON.parse()
+// JSON.parse(jsonString, reviver): Converts valid JSON string into JS object/value
+
+// Example 1: Parsing a JSON string
+const jsonStr = '{"name":"Bob","age":30}';
+const user3 = JSON.parse(jsonStr);
+console.log(user3.name); // Output: "Bob"
