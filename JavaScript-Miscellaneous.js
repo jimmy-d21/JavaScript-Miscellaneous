@@ -55,3 +55,10 @@ console.log(parseFloat("12.5em")); // Output: 12.5
 
 // Example 3: Strings with scientific notation
 console.log(parseFloat("314e-2")); // Output: 3.14
+
+// 3. JSON Manipulation
+// JSON.stringify(obj, replacer, space): Converts JS object/value into JSON string
+
+// Example 1: Serializing an object
+const user2 = { name: "Alice", age: 25 };
+console.log(JSON.stringify(user2)); // Output: '{"name":"Alice","age":25}'
