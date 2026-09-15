@@ -175,3 +175,16 @@ const timer = setInterval(logTime, 500, "Tick");
 clearInterval(timer); // Immediately cleaned up for safe execution demo
 // Output:
 // (Nothing logged - cleared synchronously before the first 500ms delay)
+
+// Example 3: Dynamic interval execution
+let ticks = 0;
+const tickId = setInterval(() => {
+  ticks += 5;
+  console.log(`Progress: ${ticks}%`);
+  if (ticks >= 10) clearInterval(tickId);
+}, 100);
+// Output after ~100ms:
+// "Progress: 5%"
+// Output after ~200ms:
+// "Progress: 10%"
+// (Interval stops running)
