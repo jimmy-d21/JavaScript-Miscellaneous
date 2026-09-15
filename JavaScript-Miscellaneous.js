@@ -37,3 +37,6 @@ console.log(new String("hello") instanceof String); // Output: true
 
 // Example 1: Basic integer parsing with radix
 console.log(parseInt("42", 10)); // Output: 42
+
+// Example 2: Parsing CSS measurement strings
+console.log(parseInt("16px", 10)); // Output: 16
