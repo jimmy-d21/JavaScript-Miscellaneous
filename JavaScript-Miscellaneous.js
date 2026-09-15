@@ -150,3 +150,19 @@ handleInput("Alice"); // Cancels previous "A" timer
 clearTimeout(9999); // Fails silently without throwing error
 // Output:
 // (No output, code continues running normally)
+
+// Topic 4.3: setInterval()
+// setInterval(fn, interval, ...args): Executes callback repeatedly every interval (ms); returns interval ID
+
+// Example 1: Basic recurring interval
+let count = 0;
+const intervalId = setInterval(() => {
+  count++;
+  console.log(`Interval count: ${count}`);
+  if (count === 2) clearInterval(intervalId);
+}, 100);
+// Output after ~100ms:
+// "Interval count: 1"
+// Output after ~200ms:
+// "Interval count: 2"
+// (Interval stops running)
