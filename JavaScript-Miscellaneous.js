@@ -17,7 +17,13 @@ console.log(typeof null); // Output: "object"
 
 // Topic 1.2: instanceof Operator
 // instanceof: Checks if an object is an instance of a specific class/constructor prototype
+
 // Example 1: Custom class instance check
 class User {}
 const user = new User();
 console.log(user instanceof User); // Output: true
+
+// Example 2: Checking built-in complex types
+const arr = [1, 2, 3];
+console.log(arr instanceof Array); // Output: true
+console.log(arr instanceof Object); // Output: true
