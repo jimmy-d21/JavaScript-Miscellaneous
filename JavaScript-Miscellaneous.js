@@ -208,3 +208,12 @@ const timer2 = setInterval(() => {
 // (~150ms) "1"
 // (~150ms) "Liftoff!"
 // (Interval stops running)
+
+// Example 2: Manual stop trigger
+const autoSave = setInterval(() => {
+  console.log("Saving...");
+}, 5000);
+// User closes document:
+clearInterval(autoSave);
+// Output:
+// (Nothing logged - cleared synchronously before the 5000ms delay elapses)
