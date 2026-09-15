@@ -31,3 +31,9 @@ console.log(arr instanceof Object); // Output: true
 // Example 3: Primitive values vs Object wrappers
 console.log("hello" instanceof String); // Output: false
 console.log(new String("hello") instanceof String); // Output: true
+
+// 2. Number Parsing
+// parseInt(str, radix): Parses string from left to right and returns integer; always pass radix (usually 10)
+
+// Example 1: Basic integer parsing with radix
+console.log(parseInt("42", 10)); // Output: 42
