@@ -145,3 +145,8 @@ handleInput("A");
 handleInput("Alice"); // Cancels previous "A" timer
 // Output after 300ms:
 // "Searching: Alice"
+
+// Example 3: Safe cancellation with non-existent ID
+clearTimeout(9999); // Fails silently without throwing error
+// Output:
+// (No output, code continues running normally)
