@@ -71,3 +71,6 @@ console.log(JSON.stringify(user, null, 2));
   "age": 25
 }
 */
+
+// Example 3: Filtering properties with replacer array
+console.log(JSON.stringify(user, ["name"])); // Output: '{"name":"Alice"}'
