@@ -121,3 +121,14 @@ console.log("First");
 // Output (synchronous code runs before asynchronous callbacks):
 // "First"
 // "Second"
+
+// Topic 4.2: clearTimeout()
+// clearTimeout(timerId): Cancels scheduled setTimeout execution using returned timer ID
+
+// Example 1: Canceling a pending timer
+const timerId = setTimeout(() => {
+  console.log("Will not run");
+}, 1000);
+clearTimeout(timerId);
+// Output:
+// (Nothing logged - the timer was canceled before execution)
