@@ -43,3 +43,9 @@ console.log(parseInt("16px", 10)); // Output: 16
 
 // Example 3: Parsing binary strings using radix
 console.log(parseInt("1010", 2)); // Output: 10
+
+// Topic 2.2: parseFloat()
+// parseFloat(str): Parses string and returns floating-point number; preserves decimals
+
+// Example 1: Parsing decimal values
+console.log(parseFloat("3.14")); // Output: 3.14
